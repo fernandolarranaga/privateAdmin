@@ -1,0 +1,36 @@
+<mat-card>
+
+    <!-- cabecera-->
+    <mat-card-header>
+        <mat-card-title>
+            Login
+        </mat-card-title>
+        <mat-card-subtitle>
+            Accede a tu cuenta
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+
+    <form [formGroup]="loginForm" (submit)="submitLogin()">
+        <mat-form-field>
+            <input matInput placeholder="Email o usuario" formControlName="email">
+            <mat-error *ngIf="loginForm.get('email')?.hasError('required') && email?.touched">
+                El campo email es obligatorio. joder!!! asco de tío-
+            </mat-error>
+            <mat-error *ngIf="loginForm.get('email') && email?.touched">
+                El formato del email no es correcto, coño!!!!
+            </mat-error>
+        </mat-form-field>
+       
+        <mat-form-field>
+            <input type="password" matInput placeholder="password" formControlName="password">
+            <mat-error *ngIf="loginForm.get('password')?.hasError('required') && password?.touched">
+                El campo password es obligatorio, hideputa
+            </mat-error>
+        </mat-form-field><br><br>
+       
+        <button type="submit" mat-raised-button color="primary"  >Login</button>
+
+        </form>
+    </mat-card-content>
+</mat-card>

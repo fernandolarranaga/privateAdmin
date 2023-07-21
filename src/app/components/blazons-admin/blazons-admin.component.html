@@ -1,0 +1,12 @@
+
+<div class="blasones">
+    <div *ngFor="let blazons of heraldry" class="list">
+      
+      <div class="card-body">
+        <a [routerLink]="['/admin', blazons.id]">  <img [src]="blazons.img" class="card-img-top" class="rounded"  height="150px" class="elemento"> </a>
+        
+        <h5 class="card-title" class="elemento">{{ blazons.content | slice:0:40 }}&nbsp;</h5>
+        <button (click)="deleteBlazon(blazons.id)"> X </button>
+    </div>
+  </div>
+  </div>

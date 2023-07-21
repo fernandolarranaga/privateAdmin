@@ -1,0 +1,49 @@
+
+
+.blasones{
+ 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: scenter;
+    padding: 5%;
+   
+
+}
+
+.blasones .elemento {
+    flex-basis: calc(33.33% - 10px);
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .blasones .elemento {
+      flex-basis: calc(50% - 10px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .blasones .elemento {
+      flex-basis: 100%;
+    }
+  }
+
+  .blasones .elemento {
+    /* Estilos del elemento */
+    transition: transform 0.3s ease;
+    filter: grayscale(100%);
+  }
+  
+  .blasones .elemento:hover {
+    transform: scale(1.2);
+    filter: none;
+  }
+
+  img {
+    border-radius:5%;
+   //clip-path: circle(50%);
+
+  }
+
+  img {
+    background-color: transparent;
+  }

@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10%;
+
+  }
+  
+ 
+.container img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 20px;
+    transition: filter 0.3s ease;
+    filter: blur(0); /* Inicialmente sin desenfoque */
+  }
+  
+  .container:hover img {
+    filter: blur(0); /* Al pasar el ratón, se aplica desenfoque */
+  }
+  
+  .container img {
+    animation: moveImage 5s linear infinite;
+  }
+  
+  @keyframes moveImage {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(10px, 10px); /* Movimiento hacia abajo y hacia la derecha */
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
+  .container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: justify;
+  }
+  
+  .container p {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 10px;
+    text-align: justify;
+  }

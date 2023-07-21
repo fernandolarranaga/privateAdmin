@@ -1,0 +1,50 @@
+#menu{
+    margin:10px;
+    padding: 10px;
+}
+
+.fixed-toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff; 
+    z-index: 100; 
+    
+  }
+.toolbar {
+    position: fixed;
+    display: flex;
+    justify-content:flex-end; /* To push the buttons to the right */
+    align-items: center;
+  }
+  
+  .toolbar button {
+    margin-left: 10px; /* Add some spacing between buttons if needed */
+  }
+
+  .toolbar .right-buttons {
+    display: flex;
+    align-items: center;
+  }
+button{
+    margin:10px;
+    border-radius: 5%;
+ 
+}
+
+.imagen{
+    width: 100%;
+    display: block;
+   margin: 0;
+}
+
+.login{
+  color:lightgreen;
+  padding: 5px;
+}
+
+.logout{
+  color:red;
+  padding: 5px;
+}
