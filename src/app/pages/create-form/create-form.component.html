@@ -2,18 +2,15 @@
 <!-- Esto es un comentario de ejemplo que el navegador ignorará -->
 
 <form method="post">
-    <br>
-      <h1> Sube tu libro</h1>
-    
-      <input class="txt" type="text" [(ngModel)]="formApps.content" name="content" placeholder="Nombre"/>
-      <br><br>
-    
-      <input class="txt" type="text" [(ngModel)]="formApps.date" name="date" placeholder="Date"/>
-      <br><br>
-    
+  <h1>Sube tu libro</h1>
 
-      <input class="txt" type="text" [(ngModel)]="formApps.img" name="img" placeholder="image"/>
-      <br>
-      <button (click)="crearEscudo()"> Crear Escudo </button>
-    
-        </form>
+  <input class="txt" type="text" [(ngModel)]="formApps.content" name="content" placeholder="Nombre" />
+  <br /><br />
+
+  <textarea class="txt" [(ngModel)]="formApps.date" name="date" placeholder="Date"></textarea>
+  <br /><br />
+
+  <input class="txt" type="text" [(ngModel)]="formApps.img" name="img" placeholder="image" />
+  <br />
+  <button class="btn" (click)="crearEscudo()">Crear Escudo</button>
+</form>

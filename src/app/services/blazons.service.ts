@@ -1,6 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Blazon } from '../blazon';
 
 @Injectable({
   providedIn: 'root'
@@ -10,8 +11,8 @@ export class BlazonsService {
 
   constructor(public http:HttpClient) { }
 
-  getBlazons(): Observable<any> {
-    return this.http.get(this.apiUrl);
+  getBlazons(): Observable<Blazon[]> {
+    return this.http.get<Blazon[]>(this.apiUrl);
   }
 
   getBlason(blasonId: string): Observable<any> {

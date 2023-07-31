@@ -1,6 +1,7 @@
+
 <div class="blasones">
   
-    <div *ngFor="let blazons of heraldry" >
+    <div *ngFor="let blazons of heraldry | paginate:page_size:page_number" >
       <a [routerLink]="['/heraldry', blazons.id]"> <img [src]="blazons.img" class="card-img-top" class="rounded"  height="300 px" class="elemento"> </a>
       <div class="card-body">
         <h5 class="card-title" class="elemento">{{ blazons.content }}&nbsp;</h5>
@@ -8,3 +9,11 @@
     </div>
   </div>
   
+  <div class="blasones"><mat-paginator [length]="heraldry.length"
+    [pageSize]="page_size"
+    [pageSizeOptions]="pageSizeOptions"
+    (page)="handlePage($event)"
+    aria-label="Select page">
+</mat-paginator>
+  
+  </div>

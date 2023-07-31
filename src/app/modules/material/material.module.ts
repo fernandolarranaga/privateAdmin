@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { MatButtonModule} from "@angular/material/button";
 import { MatInputModule } from '@angular/material/input'
 import { MatCardModule } from '@angular/material/card'
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 
@@ -17,7 +18,8 @@ import { MatCardModule } from '@angular/material/card'
   exports: [
     MatButtonModule,
     MatInputModule,
-    MatCardModule
+    MatCardModule,
+    MatPaginatorModule
   ]
 })
 export class MaterialModule { }

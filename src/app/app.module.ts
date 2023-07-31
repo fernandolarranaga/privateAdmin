@@ -17,6 +17,7 @@ import { BlazonsAdminComponent } from './components/blazons-admin/blazons-admin.
 import { BlazonIdAdminComponent } from './components/blazon-id-admin/blazon-id-admin.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CreateFormComponent } from './pages/create-form/create-form.component';
+import { PaginatePipe } from './pipes/paginate.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { CreateFormComponent } from './pages/create-form/create-form.component';
     BlazonsAdminComponent,
     BlazonIdAdminComponent,
     HomeComponent,
-    CreateFormComponent
+    CreateFormComponent,
+    PaginatePipe
   ],
   imports: [
     BrowserModule,
