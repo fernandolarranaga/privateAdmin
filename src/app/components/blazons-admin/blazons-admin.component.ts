@@ -22,13 +22,13 @@ export class BlazonsAdminComponent implements OnInit {
   
     getBlazons(){
       this.blazonService.getBlazons()
-      .subscribe(data=>this.heraldry=data);
+      .subscribe(data=>this.heraldry=data.reverse());
       console.log(this.heraldry.content)
     }
   
 
 
-       deleteBlazon(id: any) {
+    /*   deleteBlazon(id: any) {
       if (window.confirm('Are you sure?')) {
         this.blazonService.deleteBlason(id).subscribe(() => {
           this.router.navigate(['/']);
@@ -37,6 +37,6 @@ export class BlazonsAdminComponent implements OnInit {
         });
       }
     }
-  
+  */
     
   }

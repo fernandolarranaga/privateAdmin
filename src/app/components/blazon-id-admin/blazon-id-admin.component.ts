@@ -26,4 +26,14 @@ export class BlazonIdAdminComponent implements OnInit {
       console.error('ID de blason es nulo.');
     }
   }
+
+  deleteBlazon(id: any) {
+    if (window.confirm('Are you sure?')) {
+      this.blasonService.deleteBlason(id).subscribe(() => {
+        this.router.navigate(['/']);
+      }, (error) => {
+        console.error('Error al eliminar el blazon', error);
+      });
+    }
+  }
 }

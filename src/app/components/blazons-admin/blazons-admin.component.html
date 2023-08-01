@@ -1,4 +1,7 @@
-<a routerLink="/heraldryCreate" class="form">Crea un nuevo elemento</a>
+<h1>Bienvenido a la zona Admin</h1>
+<h2>
+  <a routerLink="/heraldryCreate" class="form">Crea una nueva entrada</a> 
+</h2>
 
 <div class="blasones">
     <div *ngFor="let blazons of heraldry" class="list">
@@ -6,8 +9,8 @@
       <div class="card-body">
         <a [routerLink]="['/admin', blazons.id]">  <img [src]="blazons.img" class="card-img-top" class="rounded"  height="150px" class="elemento"> </a>
         
-        <h5 class="card-title" class="elemento">{{ blazons.content | slice:0:40 }}&nbsp;</h5>
-        <button (click)="deleteBlazon(blazons.id)"> X </button>
+        <h5 class="card-title" class="elemento">{{ blazons.content | slice:0:40 }}&nbsp;{{ blazons.fecha | date:'short' }}</h5>
+      <!--  <button (click)="deleteBlazon(blazons.id)"> X </button>-->
     </div>
   </div>
   </div><br>

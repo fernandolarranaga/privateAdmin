@@ -10,6 +10,7 @@ import { BlazonsAdminComponent } from './components/blazons-admin/blazons-admin.
 import { BlazonIdAdminComponent } from './components/blazon-id-admin/blazon-id-admin.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CreateFormComponent } from './pages/create-form/create-form.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 const routes: Routes = [
   {
@@ -46,6 +47,10 @@ canActivate: [AuthGuard]
   path: 'admin/:id',
   component:BlazonIdAdminComponent,
   canActivate: [AuthGuard]
+},
+{
+  path: 'contact',
+  component:ContactComponent,
 },
   { path: "**", component: NotFoundPageComponent }
 ];

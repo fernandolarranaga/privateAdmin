@@ -21,7 +21,7 @@ export class BlazonsComponent implements OnInit {
 
   getBlazons(){
     this.blazonService.getBlazons()
-    .subscribe(data=>this.heraldry=data);
+    .subscribe(data=>this.heraldry=data.reverse());
     console.log(this.heraldry.content)
   }
 

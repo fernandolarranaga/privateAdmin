@@ -13,17 +13,21 @@ import { BlazonsService } from 'src/app/services/blazons.service';
 })
 export class CreateFormComponent implements OnInit {
   heraldrys: any;
+  blasones:Blazon[]=[]
 
 formApps= {
   content: '',
   date: '', 
-  img: ''
+  img: '',
+  fecha:''
 };
 
 
   constructor(public heraldry:BlazonsService, private route: Router ) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    
+  }
 
   crearEscudo(){
     this.heraldry.createBlason(this.formApps)
@@ -33,4 +37,13 @@ formApps= {
       
     })
   }
+
+  createBlazons(){
+    this.formApps.fecha = new Date().toISOString();
+
+    this.heraldry.createBlason(this.formApps)
+    .subscribe(data => {
+      this.blasones =data;
+      this.route.navigate(['/admin'])
+  })}
 }

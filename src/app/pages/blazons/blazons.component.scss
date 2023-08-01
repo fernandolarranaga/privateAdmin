@@ -29,7 +29,7 @@
   }
   
   .blasones .elemento:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     filter: none;
   }
 
@@ -42,3 +42,15 @@
   img {
     background-color: transparent;
   }
+
+  .titulo{
+    color: #1c71aa;
+    font-size: x-large;
+    padding: 2em auto;
+    display: block;
+    width: fit-content;
+    position: relative;
+    top: .5rem;
+    font-weight: bold;
+  }
+  

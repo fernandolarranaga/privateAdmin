@@ -18,6 +18,7 @@ import { BlazonIdAdminComponent } from './components/blazon-id-admin/blazon-id-a
 import { HomeComponent } from './pages/home/home.component';
 import { CreateFormComponent } from './pages/create-form/create-form.component';
 import { PaginatePipe } from './pipes/paginate.pipe';
+import { ContactComponent } from './pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { PaginatePipe } from './pipes/paginate.pipe';
     BlazonIdAdminComponent,
     HomeComponent,
     CreateFormComponent,
-    PaginatePipe
+    PaginatePipe,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

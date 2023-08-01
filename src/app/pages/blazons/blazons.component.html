@@ -1,12 +1,13 @@
-
+<h1 class="titulo">Entradas</h1><br/>
 <div class="blasones">
   
     <div *ngFor="let blazons of heraldry | paginate:page_size:page_number" >
       <a [routerLink]="['/heraldry', blazons.id]"> <img [src]="blazons.img" class="card-img-top" class="rounded"  height="300 px" class="elemento"> </a>
       <div class="card-body">
-        <h5 class="card-title" class="elemento">{{ blazons.content }}&nbsp;</h5>
-        <h5 class="card-title" class="elemento">{{ blazons.date | slice:0:40 }}&nbsp;</h5>
+        <h2 class="card-title" class="">{{ blazons.content }}&nbsp;</h2>
     </div>
+    <h5>publicado el: {{ blazons.fecha | date:'short' }}</h5>
+
   </div>
   
   <div class="blasones"><mat-paginator [length]="heraldry.length"
